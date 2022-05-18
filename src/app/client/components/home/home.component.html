@@ -1,0 +1,311 @@
+<h4 style="font-size:35px; color:white;">
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+</h4>
+<div class="container">
+  <div class="row justify-content-center">
+    <!--team-1-->
+    <div class="col-lg-4">
+      <div class="main-box-layout">
+        <div class="team-front">
+          <img src="./../../../../assets/Admin/check.png" class="img-fluid" />
+          <h1>Approved</h1>
+          <h3>Estimitated Count</h3>
+        </div>
+
+        <div class="team-back">
+          <span>
+            The total count for the approve request are Estimitated Count.
+          </span>
+        </div>
+      </div>
+    </div>
+    <!--team-1-->
+
+    <!--team-2-->
+    <div class="col-lg-4">
+      <div class="main-box-layout">
+        <div class="team-front">
+          <img src="./../../../../assets/Admin/cancel.png" class="img-fluid" />
+          <h1>Decline</h1>
+          <h3>Estimitated Count</h3>
+        </div>
+
+        <div class="team-back">
+          <span>
+            The total count for the decline request are Estimitated Count.
+          </span>
+        </div>
+      </div>
+    </div>
+    <!--team-2-->
+  </div>
+</div>
+
+<div class="container">
+  <div class="card-group vgr-cards">
+    <div class="card" style="margin-top: 10%;">
+      <div class="card-img-body">
+        <img
+          class="card-img"
+          src="https://picsum.photos/500/230"
+          alt="Card image cap"
+        />
+      </div>
+      <div class="card-body">
+        <!-- <h4 class="card-title">Card title</h4> -->
+        <p class="card-text">
+          This is a wider card with supporting text below as a natural lead-in
+          to additional content. This content is a little bit longer. This is a
+          wider card with supporting text below as a natural lead-in to
+          additional content. This content is a little bit longer.
+        </p>
+        <a class="btn btn-danger" style="color: white;">Compose Request</a>
+        <button
+          type="button"
+          class="btn btn-outline-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          <i class="fa fa-plus"></i>
+        </button>
+
+        <!-- Button trigger modal -->
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-img-body">
+        <img
+          class="card-img"
+          src="https://picsum.photos/400/200"
+          alt="Card image cap"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal For Reqest-->
+<div
+  class="modal fade modal-layout"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="modalForRequest"
+  aria-hidden="true"
+>
+  <div class="modal-dialog box mt-5">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalForRequest">
+          APPLY FOR A REQUEST
+        </h5>
+      </div>
+      <div class="modal-body">
+        <form *ngFor="let user of users">
+          <div class="row">
+            <div class="col d-flex">
+              <div>
+                <label>First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="First Name"
+                  value="{{ user.firstname }}"
+                  disabled
+                />
+              </div>
+              <div>
+                <label>M.I.</label>
+                <input
+                  type="text"
+                  class="form-control ml-1"
+                  placeholder="M.I."
+                  style="width:37px;"
+                  value="{{ user.middlename.charAt(0) }}."
+                  disabled
+                />
+              </div>
+            </div>
+            <div class="col">
+              <label>Last Name</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Last Name"
+                value="{{ user.lastname }}"
+                disabled
+              />
+            </div>
+          </div>
+          <br />
+          <div class="row">
+            <div class="col">
+              <div class="form-check radio-input">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gridRadios"
+                  id="gridRadios1"
+                  value="option1"
+                  checked
+                />
+                <label class="form-check-label" for="gridRadios1">
+                  Regular Loan
+                </label>
+              </div>
+
+              <div class="col form-check radio-input">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gridRadios"
+                  id="gridRadios2"
+                  value="option2"
+                />
+                <label class="form-check-label" for="gridRadios2">
+                  Salary Loan
+                </label>
+              </div>
+
+              <div class="form-check radio-input">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="gridRadios"
+                  id="gridRadios2"
+                  value="option2"
+                />
+                <label class="form-check-label" for="gridRadios2">
+                  Advance Loan
+                </label>
+              </div>
+            </div>
+            <div class="col">
+              <label>How much do you need?</label>
+              <input
+                type="number"
+                class="form-control"
+                placeholder="How much do you need"
+                min="4" max="5"
+              />
+            </div>
+          </div>
+
+          <div>
+            <br />
+            <div class="row">
+              <div class="col">
+                <label>Current Address</label>
+                <input type="text" class="form-control" placeholder="Address" />
+              </div>
+              <div class="col">
+                <label>Employment Address</label>
+                <input type="text" class="form-control" placeholder="Address" />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <label>Reasons</label>
+                <p for="p" class="text-muted" style="font-size: 11px;">
+                  Limit: 150 letters.
+                </p>
+                <!-- <input type="text" class="form-control" placeholder="Reason for requesting" style="border:none; word-break: break-all;"/> -->
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Reason for request"
+                  maxlength="150"
+                ></textarea>
+              </div>
+            </div>
+            <div class="row" style="margin-right: 10%; margin-left: 10%;">
+              <div class="form-check col">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label
+                  class="form-check-label"
+                  for="flexCheckDefault"
+                  style="font-size: 10px;"
+                >
+                  I have read the important information and accept that by
+                  completing the application I will be bound by the terms.
+                </label>
+              </div>
+              <div class="form-check col">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <label
+                  class="form-check-label"
+                  for="flexCheckDefault"
+                  style="font-size: 10px;"
+                >
+                  Any personal and credit information obtained may be disclosed
+                  from time to time to other lenders, credit bureaus or other
+                  credit reporting agencies.
+                </label>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          cancel
+        </button>
+        <button type="button" class="btn btn-primary">Send Request</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container" style="margin-top:7%;">
+  <footer class="bg-light text-center">
+    <!-- Grid container -->
+    <div class="container">
+      <!-- Section: Form -->
+      <section class="">
+        <form action="">
+          <!--Grid row-->
+          <div class="row d-flex justify-content-center">
+            <!--Grid column-->
+            <div class="col-auto">
+              <!-- Submit button -->
+
+              <!-- Button trigger modal -->
+              <!-- <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"
+                >
+                  Launch static backdrop modal
+                </button> -->
+            </div>
+            <!--Grid column-->
+          </div>
+          <!--Grid row-->
+        </form>
+      </section>
+      <!-- Section: Form -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      <p style="margin-left:11%;">
+        © 2022 Copyright: <a class="text-dark">John Eerie Stranger</a>
+      </p>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</div>

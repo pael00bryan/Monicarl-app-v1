@@ -1,0 +1,29 @@
+
+<div class="container">
+    <ul class="sidebar" *ngFor="let user of users">
+      <li><span>{{user.firstname}} {{user.middlename}} {{user.lastname}}</span></li>
+      <li [routerLink]="['./home']">
+        <span><i class="fa fa-dashboard"></i></span><span>Dashboard</span>
+      </li>
+      <li [routerLink]="['./request']">
+        <span><i class="fa fa-bookmark"></i></span><span>Request</span>
+      </li>
+      <!-- <li [routerLink]="['./notification']" >
+        <span ><i class="fa fa-bell"></i></span><span>Notification</span>
+      </li> -->
+      <!-- <li>
+        <span><i class="fa fa-shopping-cart"></i></span><span>Products</span>
+      </li>
+      <li>
+        <span><i class="fa fa-bookmark"></i></span><span>Bookmarks</span>
+      </li> -->
+      <li style="margin-top: 300px;" (click)="logOut()">
+        <span><i class="fa fa-user" aria-hidden="true"></i></span><span>Log Out</span>
+      </li>
+    </ul>
+  
+    <div class="content" style="margin-left:12%;padding-left:10%;">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  

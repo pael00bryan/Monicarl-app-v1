@@ -1,0 +1,89 @@
+<body>
+  <div id="wrapper">
+    <h1>User Request Details</h1>
+
+    <table id="tableContent" *ngIf="requests && requests.length > 0">
+      <thead>
+        <tr>
+          <th><span>Requester</span></th>
+          <th><span>Amount</span></th>
+          <th><span>Loan Type</span></th>
+          <th><span>Date</span></th>
+          <th><span>Status</span></th>
+          <th><span>Actions</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="text-center" (click)="setRequestData(request)" *ngFor="let request of requests">
+          <td>
+            {{intersection(request.user_id)}}
+          </td>
+          <td>₱ {{ request.amount_money|number:'1.2' }}</td>
+          <td>{{ request.loan_type }}</td>
+          <td>{{ request.created_at | date:'MM/dd/yyyy' }}</td>
+          <td>
+                <ng-container *ngIf="request.status == '1';else second">approved</ng-container>
+                
+                <ng-template #second>
+                  <ng-container *ngIf="request.status == '2' ;else third">declined</ng-container>
+                  </ng-template>
+                <ng-template #third>
+                    <div class="input-group mb-3" *ngIf="request.status == '0'||'approve'||'decline'||'pending'">
+                        <select class="custom-select" id="dropdownStatus" (change)="changeRequestStatus($event, request.id)">
+                          <option selected value="pending">
+                            Pending
+                          </option>
+                          <option value="approve" >
+                            Approve
+                          </option>
+                          <option value="decline">
+                            Decline
+                          </option>
+                        </select>
+                      </div>
+                </ng-template>
+          </td>
+          
+          <td>
+            <a type="button" (click)="saveRequest(request.id)"
+              ><i class="fa fa-save"></i
+            ></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="container" style="margin-top:7%;">
+    <footer class="bg-light text-center">
+      <!-- Grid container -->
+      <div class="container">
+        <!-- Section: Form -->
+        <section class="">
+          <form action="">
+            <!--Grid row-->
+            <div class="row d-flex justify-content-center">
+              <!--Grid column-->
+              <div class="col-auto"></div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </form>
+        </section>
+        <!-- Section: Form -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div
+        class="ml-5 text-center p-3"
+        style="background-color: rgba(0, 0, 0, 0.2);"
+      >
+      <p style="margin-left:11%;">
+        © 2022 Copyright: <a class="text-dark">John Eerie Stranger</a>
+      </p>
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </div>
+  <!-- End of .container -->

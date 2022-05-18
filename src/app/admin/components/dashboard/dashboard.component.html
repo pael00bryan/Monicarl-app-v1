@@ -1,0 +1,27 @@
+<div class="container">
+  <ul class="sidebar" *ngFor=" let admin of admins">
+    <li><span>{{admin.firstname}} {{admin.middlename}} {{admin.lastname}}</span></li>
+    <li [routerLink]="['./home']">
+      <span><i class="fa fa-dashboard"></i></span><span>Dashboard</span>
+    </li>
+    <li [routerLink]="['./requests']">
+      <span><i class="fa fa-bookmark"></i></span><span>Requests</span>
+    </li>
+    <li [routerLink]="['./users']">
+      <span><i class="fa fa-users"></i></span><span>Users</span>
+    </li>
+    <li [routerLink]="['./admin']">
+      <span><i class="fa fa-user-md"></i></span><span>Admin</span>
+    </li>
+    <!-- <li>
+      <span><i class="fa fa-bookmark"></i></span><span>Bookmarks</span>
+    </li> -->
+    <li style="margin-top: 300px;" (click)="logout()">
+      <span><i class="fa fa-user" aria-hidden="true"></i></span><span>Log Out</span>
+    </li>
+  </ul>
+
+  <div class="content" style="margin-left:12%;padding-left:10%;">
+    <router-outlet></router-outlet>
+  </div>
+</div>

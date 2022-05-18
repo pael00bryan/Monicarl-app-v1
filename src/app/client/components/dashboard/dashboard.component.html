@@ -1,0 +1,237 @@
+<app-header></app-header>
+<!-- <header class="header">
+  <h1 class="logo"><a href="#">Monicarl</a></h1>
+  <ul class="main-nav">
+    <li><a routerLink="./request">Request</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Portfolio</a></li>
+    <li>
+      <a href="#"><i class="fa fa-bell" aria-hidden="true"></i></a>
+    </li>
+    <li class="dropdown" style="margin-right: 60px;">
+      <button
+        class="btn btn-secondary dropdown-toggle"
+        type="button"
+        id="dropdownMenuButton"
+        data-toggle="dropdown"
+      >
+        <i class="fa fa-user" aria-hidden="true"></i>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#" style="font-size: 12px;">
+          <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+          View Profile
+        </a>
+        <a class="dropdown-item" href="#" style="font-size: 12px;">
+          <i class="fa fa-arrow-circle-o-right" aria-hidden="true"></i>
+          Logout
+        </a>
+      </div>
+    </li>
+  </ul>
+</header> -->
+
+<!-- <br /><br /><br /><br /> -->
+<!-- 
+<div class="container">
+  <div class="card">
+    <img
+      src="https://codingyaar.com/wp-content/uploads/bootstrap-4-card-image-left-demo-image.jpg"
+      class="card-img-top"
+    />
+    <div class="card-body m-5">
+      <div class="input-group mb-3 text-white justify-content-center">
+        <h5 class="card-title bg-danger pt-1" style="height:35px;">
+          COMPOSE REQUEST
+        </h5>
+        <div>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            data-toggle="modal"
+            data-target="#form"
+            style="height:35px;"
+          >
+            <i class="fa fa-plus mb-5" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+      <div>
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+            <tr>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>@fat</td>
+            </tr>
+            <tr>
+              <td colspan="2">Larry the Bird</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  type="button"
+  class="btn btn-primary"
+  data-bs-toggle="modal"
+  data-bs-target="#exampleModal"
+>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header border-bottom-0">
+        <h5 class="modal-title" id="exampleModalLabel">
+          APPLY FOR A REQUEST
+        </h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <form>
+        <div class="modal-body">
+          <div class="container">
+            <form action="">
+              <div class="row">
+                <div class="col">
+                  <label for="transaction">Full Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="transaction"
+                    aria-describedby="emailHelp"
+                    placeholder="Full name as it appears on bank account"
+                  />
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck1"
+                    />
+                    <label class="custom-control-label" for="customCheck1"
+                      >Regular Loan</label
+                    >
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck1"
+                    />
+                    <label class="custom-control-label" for="customCheck1"
+                      >Salary Loan</label
+                    >
+                  </div>
+                  <div class="custom-control custom-checkbox">
+                    <input
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="customCheck1"
+                    />
+                    <label class="custom-control-label" for="customCheck1"
+                      >Advance Loan</label
+                    >
+                  </div>
+
+                  <div class="form-group">
+                    <label for="exampleFormControlTextarea1"
+                      >Example textarea</label
+                    >
+                    <textarea
+                      class="form-control"
+                      id="exampleFormControlTextarea1"
+                      rows="3"
+                    ></textarea>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input
+                      type="radio"
+                      id="customRadio1"
+                      name="customRadio"
+                      class="custom-control-input"
+                    />
+                    <label class="custom-control-label" for="customRadio1"
+                      >I have read the important information and accept that by
+                      completing the application I will be bound by the terms
+                    </label>
+                  </div>
+                </div>
+
+                <div class="col">
+                  <label for="transaction">How much do you need?</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="transaction"
+                    aria-describedby="emailHelp"
+                    placeholder="How much do you need?"
+                  />
+                  <label for="transaction">Transaction Method</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="transaction"
+                    aria-describedby="emailHelp"
+                    placeholder="Transaction Method"
+                  />
+                  <label for="transaction">Address</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="transaction"
+                    aria-describedby="emailHelp"
+                    placeholder="Address"
+                  />
+                  <label for="transaction">Employment Address</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="transaction"
+                    aria-describedby="emailHelp"
+                    placeholder="Employment Address"
+                  />
+                  <div class="custom-control custom-radio">
+                    <input
+                      type="radio"
+                      id="customRadio2"
+                      name="customRadio"
+                      class="custom-control-input"
+                    />
+                    <label class="custom-control-label" for="customRadio2"
+                      >Any personal and credit information obtained may be
+                      disclosed from time to time to other lenders, credit
+                      bureaus or other credit reporting agencies.</label
+                    >
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer border-top-0 d-flex justify-content-center">
+          <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div> -->

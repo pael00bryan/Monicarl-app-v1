@@ -1,0 +1,26 @@
+<body>
+  <div class="content">
+    <div class="text">
+      Login Form
+    </div>
+    <form action="#" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="field">
+        <input type="text" formControlName="email" required />
+        <span><i class="fa fa-user" aria-hidden="true"></i> </span>
+        <label>Email or Phone</label>
+      </div>
+      <div class="field">
+        <input type="password" formControlName="password" required />
+        <span><i class="fa fa-lock" aria-hidden="true"></i> </span>
+        <label>Password</label>
+      </div>
+      <div class="forgot-pass">
+        <a routerLink="../forgot-password">Forgot Password?</a>
+      </div>
+      <button type="submit">Sign in</button>
+      <div class="forgot-pass">
+          <a href="./../../landing-page.component.html"> Go Back</a>
+        </div>
+    </form>
+  </div>
+</body>
