@@ -8,7 +8,6 @@ import { RequestsComponent } from './components/requests/requests.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { AdminComponent } from './components/admin/admin.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
@@ -17,7 +16,6 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     UsersComponent,
     RequestsComponent,
     HomeComponent,
-    AdminComponent,
 
   ],
   imports: [

@@ -24,7 +24,7 @@
       />
     </h1>
 
-    <table id="tableContent" *ngIf="users && users.length > 0">
+    <table id="tableContent" >
       <thead>
         <tr>
           <th><span>Firstname</span></th>
@@ -36,8 +36,8 @@
           <th><span>Actions</span></th>
         </tr>
       </thead>
-      <tbody *ngFor="let user of users | filter : searchData">
-        <tr class="text-center">
+      <tbody *ngIf="users && users.length > 0" >
+        <tr class="text-center" *ngFor="let user of users | filter : searchData">
           <td>{{ user.firstname }}</td>
           <td>{{ user.middlename }}</td>
           <td>{{ user.lastname }}</td>

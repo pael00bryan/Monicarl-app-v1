@@ -2,7 +2,7 @@
   <div id="wrapper">
     <h1>User Request Details</h1>
 
-    <table id="tableContent" *ngIf="requests && requests.length > 0">
+    <table id="tableContent">
       <thead>
         <tr>
           <th><span>Requester</span></th>
@@ -13,7 +13,7 @@
           <th><span>Actions</span></th>
         </tr>
       </thead>
-      <tbody>
+      <tbody  *ngIf="requests && requests.length > 0">
         <tr class="text-center" (click)="setRequestData(request)" *ngFor="let request of requests">
           <td>
             {{intersection(request.user_id)}}

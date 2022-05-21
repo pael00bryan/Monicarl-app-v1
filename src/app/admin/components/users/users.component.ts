@@ -41,9 +41,12 @@ export class UsersComponent implements OnInit {
 
   onUpdateRow() {
     this.user.id = this.setSelectedUser.id;
+    
     this.setSelectedUser = this.userFormGroup.value;
-    this.updateUser();
-    this.fetchUsers();
+    console.log(this.setSelectedUser);
+    
+    // this.updateUser();
+    // this.fetchUsers();
   }
   // GET
   fetchUsers() {
@@ -77,7 +80,6 @@ export class UsersComponent implements OnInit {
   }
 
   selectedUser(user: User) {
-    // console.log(this.users.filter(x => x.id === user));
     this.setSelectedUser = user;
     console.log(this.setSelectedUser);
     if (this.users.find(x => x.id === user.id)) {

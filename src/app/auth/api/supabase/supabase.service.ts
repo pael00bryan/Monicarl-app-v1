@@ -91,19 +91,19 @@ export class SupabaseService {
     return { admins, error };
   }
 
-  async getAdminByToken(token:string){
+  async getAdminByToken(token: string) {
     const { data: admins, error } = await this.supabase
-    .from <Admin>('admins')
-    .select('*')
-    .eq('token', token)
+      .from<Admin>('admins')
+      .select('*')
+      .eq('token', token);
     return { admins, error };
   }
 
-  async getUserByToken(token:string){
+  async getUserByToken(token: string) {
     const { data: users, error } = await this.supabase
-    .from <User>('users')
-    .select('*')
-    .eq('token', token)
+      .from<User>('users')
+      .select('*')
+      .eq('token', token);
     return { users, error };
   }
 }

@@ -100,7 +100,7 @@
         </h5>
       </div>
       <div class="modal-body">
-        <form *ngFor="let user of users">
+        <form *ngFor="let user of users" [formGroup]="requestForm" (ngSubmit)="sendRequest()">
           <div class="row">
             <div class="col d-flex">
               <div>
@@ -186,6 +186,7 @@
                 class="form-control"
                 placeholder="How much do you need"
                 min="4" max="5"
+                formControlName="amount_money"
               />
             </div>
           </div>
@@ -195,11 +196,11 @@
             <div class="row">
               <div class="col">
                 <label>Current Address</label>
-                <input type="text" class="form-control" placeholder="Address" />
+                <input type="text" class="form-control" placeholder="Address" formControlName="current_address" />
               </div>
               <div class="col">
                 <label>Employment Address</label>
-                <input type="text" class="form-control" placeholder="Address" />
+                <input type="text" class="form-control" placeholder="Address" formControlName="employment_address"/>
               </div>
             </div>
 
@@ -217,6 +218,7 @@
                   rows="10"
                   placeholder="Reason for request"
                   maxlength="150"
+                  formControlName="request_reason"
                 ></textarea>
               </div>
             </div>
@@ -262,7 +264,7 @@
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           cancel
         </button>
-        <button type="button" class="btn btn-primary">Send Request</button>
+        <button type="submit" class="btn btn-primary">Send Request</button>
       </div>
     </div>
   </div>
